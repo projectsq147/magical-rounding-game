@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
-import { Star, Crown, Heart, Sparkles, Calculator, Plus, Minus, X, Divide } from 'lucide-react';
+import { Star, Crown, Heart, Sparkles } from 'lucide-react';
 import RoundingGame from './components/RoundingGame';
-// Import other games as you create them
-// import AdditionGame from './components/AdditionGame';
-// import SubtractionGame from './components/SubtractionGame';
-// import MultiplicationGame from './components/MultiplicationGame';
-// import DivisionGame from './components/DivisionGame';
 
 const App = () => {
   const [currentGame, setCurrentGame] = useState('menu');
@@ -26,7 +21,7 @@ const App = () => {
       subtitle: 'Add up the magic!',
       icon: '🧚‍♀️',
       color: 'from-green-400 to-emerald-400',
-      component: null, // Will be AdditionGame
+      component: null,
       available: false
     },
     {
@@ -35,7 +30,7 @@ const App = () => {
       subtitle: 'Take away troubles!',
       icon: '🦄',
       color: 'from-blue-400 to-cyan-400',
-      component: null, // Will be SubtractionGame
+      component: null,
       available: false
     },
     {
@@ -44,7 +39,7 @@ const App = () => {
       subtitle: 'Multiply the wonder!',
       icon: '✨',
       color: 'from-purple-400 to-violet-400',
-      component: null, // Will be MultiplicationGame
+      component: null,
       available: false
     },
     {
@@ -53,7 +48,7 @@ const App = () => {
       subtitle: 'Share the sparkles!',
       icon: '👑',
       color: 'from-yellow-400 to-orange-400',
-      component: null, // Will be DivisionGame
+      component: null,
       available: false
     }
   ];
