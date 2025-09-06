@@ -320,10 +320,6 @@ const RoundingGame = ({ onBack }) => {
                 <span className="mr-2 text-lg">{difficultyInfo.icon}</span>
                 {difficultyInfo.name}
               </div>
-              <div className="text-gray-600 text-sm">
-                <div>{difficultyInfo.description}</div>
-                <div className="text-xs text-gray-500">Range: {difficultyInfo.range}</div>
-              </div>
             </div>
             
             <div className="flex items-center space-x-6 text-sm">
@@ -333,9 +329,6 @@ const RoundingGame = ({ onBack }) => {
               </div>
               <div className="flex items-center text-purple-600 font-bold bg-purple-100 px-3 py-1 rounded-full">
                 🔥 {streak}
-              </div>
-              <div className="text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
-                Q: {questionsAnswered}
               </div>
               <button
                 onClick={resetGame}
@@ -348,18 +341,12 @@ const RoundingGame = ({ onBack }) => {
           </div>
         </div>
 
-        {/* Rest of the game content remains the same */}
+        {/* Game Content */}
         <div className="bg-white rounded-3xl shadow-2xl p-8 mb-6 text-center border-4 border-purple-200">
           <div className="mb-6">
             <h2 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">
               ✨ Round this magical number to the nearest {roundTo.toLocaleString()} ✨
             </h2>
-            <div className="text-sm text-gray-500 bg-yellow-50 border border-yellow-200 rounded-lg p-2 inline-block">
-              💡 Look at the {getRoundingHelper().position === 1 ? 'ones' : 
-                          getRoundingHelper().position === 2 ? 'tens' : 
-                          getRoundingHelper().position === 3 ? 'hundreds' : 
-                          getRoundingHelper().position === 4 ? 'thousands' : 'ten-thousands'} place to decide!
-            </div>
           </div>
           
           <div className="bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500 text-white rounded-3xl p-8 mb-6 transform hover:scale-105 transition-transform duration-300 border-4 border-white shadow-xl">
